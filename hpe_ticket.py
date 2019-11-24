@@ -1,7 +1,7 @@
 #! /usr/bin/python3
 
 # INSTRUCTIONS
-# 1. Install Python3 for windows 
+# 1. Install Python3 for Windows 
 #    https://www.python.org/downloads/release/python-380/
 # 2. Download webdriver for you Chrome version Help > About Chrome
 #    https://sites.google.com/a/chromium.org/chromedriver/downloads
