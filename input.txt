@@ -1,0 +1,8 @@
+user@company.com
+password
+12digitSAID
+
+Example:
+simonrocks@mail.com
+hpletmein
+123456789012
