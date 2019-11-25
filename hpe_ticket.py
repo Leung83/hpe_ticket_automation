@@ -51,8 +51,8 @@ driver.find_element_by_id('ctl00_ctl00_ContentPlaceHolder1_ContentPlaceHolder3Co
 driver.find_element_by_id('ctl00_ctl00_ContentPlaceHolder1_ContentPlaceHolder3Col_btnSubmitCase').click()  
 time.sleep(15)
 
-# Fill in case details defaults
-#===================================
+# Fill in default case details entries
+#=====================================
 # Find the dynamic generated iframe id
 iframeid = driver.find_element_by_tag_name('iframe')
 # Need to switch to active iframe to find elements
