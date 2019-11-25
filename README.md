@@ -1,3 +1,5 @@
+# HPE Ticket Automation
+
 Python script using Selenium to login to HPE portal (https://support.hpe.com/portal/site/hpsc/scm/home) with your credentials and Service Agreement ID (SAID). Preparing a online case with default fields.
 
 INSTRUCTIONS (only tested on Windows and Chrome driver)
