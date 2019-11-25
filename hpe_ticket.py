@@ -57,11 +57,16 @@ time.sleep(15)
 iframeid = driver.find_element_by_tag_name('iframe')
 # Need to switch to active iframe to find elements
 driver.switch_to.frame(iframeid.get_attribute('id'))
-# Populate default entries in case details
+# OS version
 driver.find_element_by_id('environmentsList').send_keys("Red Hat Enterprise Linux")
+# Work hours
 driver.find_element_by_id('ctl00_ctl00_ContentPlaceHolder1_ContentPlaceHolder3Col_txtContactHoursORTimezone').send_keys('8am-5pm CT')
-
-
-
-
+# Click email radio button
+driver.find_element_by_xpath('//*[@id="ctl00_ctl00_ContentPlaceHolder1_ContentPlaceHolder3Col_preferredContactUpdPanel"]/table/tbody/tr[2]/td[1]/a').click()
+# Click Severity drop down
+driver.find_element_by_xpath('//*[@id="ctl00_ctl00_ContentPlaceHolder1_ContentPlaceHolder3Col_ddlSeverity_title"]/tr/td[2]/span').click()
+# Select 3-Normal
+driver.find_element_by_xpath('//*[@id="ctl00_ctl00_ContentPlaceHolder1_ContentPlaceHolder3Col_ddlSeverity_child"]/ul/li[2]/span').click()
+# Site access details
+driver.find_element_by_id('ctl00_ctl00_ContentPlaceHolder1_ContentPlaceHolder3Col_txtGSDSiteAccess').send_keys("Contact ticket issuer for details")
 
