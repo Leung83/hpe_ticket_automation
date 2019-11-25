@@ -21,7 +21,7 @@ password = f.readline().strip()
 said = f.readline().strip()
 f.close()
  
-# Creating an instance webdriver 
+# Creating a webdriver instance  
 driver = webdriver.Chrome()  
 # Maximizing window
 driver.maximize_window()
