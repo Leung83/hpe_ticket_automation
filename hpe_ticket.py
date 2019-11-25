@@ -14,7 +14,7 @@ from selenium import webdriver
 from selenium.webdriver.common.keys import Keys         # Module to send keystrokes
 from selenium.webdriver.support.select import Select    # Module to select drop down
 
-# Load input_data.txt
+# Read input_data.txt to get HPE credentials 
 f = open("input.txt", "r")
 user = f.readline().strip()
 password = f.readline().strip()
@@ -44,8 +44,9 @@ time.sleep(10)
 
 # Find the dynamic generated iframe id
 iframeid = driver.find_element_by_tag_name('iframe')
+# Need to switch to active iframe to find elements
 driver.switch_to.frame(iframeid.get_attribute('id'))
-# Provide SAID, need to switch to active iframe to find elements
+# Provide SAID
 driver.find_element_by_id('ctl00_ctl00_ContentPlaceHolder1_ContentPlaceHolder3Col_txtSubmitCase').send_keys(said)
 driver.find_element_by_id('ctl00_ctl00_ContentPlaceHolder1_ContentPlaceHolder3Col_btnSubmitCase').click()  
 time.sleep(15)
@@ -54,7 +55,9 @@ time.sleep(15)
 #===================================
 # Find the dynamic generated iframe id
 iframeid = driver.find_element_by_tag_name('iframe')
+# Need to switch to active iframe to find elements
 driver.switch_to.frame(iframeid.get_attribute('id'))
+# Populate default entries in case details
 driver.find_element_by_id('environmentsList').send_keys("Red Hat Enterprise Linux")
 driver.find_element_by_id('ctl00_ctl00_ContentPlaceHolder1_ContentPlaceHolder3Col_txtContactHoursORTimezone').send_keys('8am-5pm CT')
 
