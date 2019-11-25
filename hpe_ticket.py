@@ -1,4 +1,4 @@
-#! /usr/bin/python3
+#!/usr/bin/python3
 
 # INSTRUCTIONS
 # 1. Install Python3 for Windows 
@@ -12,7 +12,7 @@
 import time  
 from selenium import webdriver      
 from selenium.webdriver.common.keys import Keys         # Module to send keystrokes
-from selenium.webdriver.support.select import Select    # Module to select drop down
+#from selenium.webdriver.support.select import Select    # Module to select drop down
 
 # Read input_data.txt to get HPE credentials 
 f = open("input.txt", "r")
