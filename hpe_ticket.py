@@ -7,7 +7,7 @@
 #    https://sites.google.com/a/chromium.org/chromedriver/downloads
 # 3. Unzip and place the chromedriver in the same folder as the script
 # 4. Install Selenium "pip install selenium"
-# 5. Update input.txt with you HPE credentials
+# 5. Update input.txt with your HPE credentials
 
 import time  
 from selenium import webdriver      
