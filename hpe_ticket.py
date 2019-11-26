@@ -99,5 +99,5 @@ time.sleep(0.5)
 driver.find_element_by_id('ctl00_ctl00_ContentPlaceHolder1_ContentPlaceHolder3Col_txtAreaCDProbDesc').send_keys('Description:\n\nActual Behavior:\n\nExpected Behavior:\n\nSteps to Reproduce:\n')
 time.sleep(0.5)
 
-# Troubleshooting steps taken template
+# Troubleshooting steps template
 driver.find_element_by_id('ctl00_ctl00_ContentPlaceHolder1_ContentPlaceHolder3Col_txtAreaCDSteps').send_keys('Troubleshooting Steps Attempted:\n\nWorkaround:\n')
