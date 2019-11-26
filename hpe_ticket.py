@@ -15,7 +15,6 @@ from selenium.webdriver.common.keys import Keys                     # Module to 
 from selenium.webdriver.support.ui import WebDriverWait             # Module to proceed when page loaded
 from selenium.webdriver.support import expected_conditions as EC    # Used by WebDriveWait module
 from selenium.webdriver.common.by import By                         # Used by WebDriveWait module
-#from selenium.webdriver.support.select import Select                # Module to select option drop down
 
 # Read input_data.txt to get HPE credentials 
 f = open("input.txt", "r")
@@ -42,13 +41,13 @@ driver.find_element_by_id('password').send_keys(password)
 driver.find_element_by_id('signIn').click()
 #time.sleep(10)
 
-# Print all ids on page
+# Print all ids on page, used for developing
 #ids = driver.find_elements_by_xpath('//*[@id]')
 #for i in ids:
 #    # print i.tag_name
 #    print(i.get_attribute('id'))
 
-# Wait for page to load max 10s or until id "iframe" is located
+# Wait for page to load max 10s or until tag "iframe" is located
 WebDriverWait(driver,10).until(EC.presence_of_element_located((By.TAG_NAME,"iframe")))
 
 # Find the dynamic generated iframe id
@@ -60,7 +59,7 @@ driver.find_element_by_id('ctl00_ctl00_ContentPlaceHolder1_ContentPlaceHolder3Co
 driver.find_element_by_id('ctl00_ctl00_ContentPlaceHolder1_ContentPlaceHolder3Col_btnSubmitCase').click()  
 #time.sleep(15)
 
-# Wait for page to load max 15s or until id "iframe" is located
+# Wait for page to load max 15s or until tag "iframe" is located
 WebDriverWait(driver,15).until(EC.presence_of_element_located((By.TAG_NAME,"iframe")))
 
 # Fill in default case details entries
@@ -98,5 +97,5 @@ time.sleep(0.5)
 driver.find_element_by_id('ctl00_ctl00_ContentPlaceHolder1_ContentPlaceHolder3Col_txtAreaCDProbDesc').send_keys('Description:\n\nActual Behavior:\n\nExpected Behavior:\n\nSteps to Reproduce:\n')
 time.sleep(0.5)
 
-# Troubleshooting steps template
+# Troubleshooting steps  template
 driver.find_element_by_id('ctl00_ctl00_ContentPlaceHolder1_ContentPlaceHolder3Col_txtAreaCDSteps').send_keys('Troubleshooting Steps Attempted:\n\nWorkaround:\n')
