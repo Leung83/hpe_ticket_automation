@@ -39,7 +39,6 @@ WebDriverWait(driver,2).until(EC.presence_of_element_located((By.ID,"username"))
 driver.find_element_by_id('username').send_keys(user)
 driver.find_element_by_id('password').send_keys(password)
 driver.find_element_by_id('signIn').click()
-#time.sleep(10)
 
 # Print all ids on page, used for developing
 #ids = driver.find_elements_by_xpath('//*[@id]')
@@ -48,7 +47,8 @@ driver.find_element_by_id('signIn').click()
 #    print(i.get_attribute('id'))
 
 # Wait for page to load max 10s or until tag "iframe" is located
-WebDriverWait(driver,10).until(EC.presence_of_element_located((By.TAG_NAME,"iframe")))
+#WebDriverWait(driver,10).until(EC.presence_of_element_located((By.TAG_NAME,"iframe")))
+time.sleep(10)
 
 # Find the dynamic generated iframe id
 iframeid = driver.find_element_by_tag_name('iframe')
