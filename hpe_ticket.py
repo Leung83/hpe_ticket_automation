@@ -74,6 +74,10 @@ driver.find_element_by_xpath('//*[@id="ctl00_ctl00_ContentPlaceHolder1_ContentPl
 # Add time delay to avoid select/input issues
 time.sleep(0.5)
 
+# Select HPE Support Engineer radio button
+driver.find_element_by_xpath('//*[@id="ctl00_ctl00_ContentPlaceHolder1_ContentPlaceHolder3Col_preferredServiceUpdPanel"]/table/tbody/tr[2]/td[1]/a').click()
+time.sleep(0.5)
+
 # Click Severity drop down
 driver.find_element_by_xpath('//*[@id="ctl00_ctl00_ContentPlaceHolder1_ContentPlaceHolder3Col_ddlSeverity_title"]/tr/td[2]/span').click()
 time.sleep(0.5)
